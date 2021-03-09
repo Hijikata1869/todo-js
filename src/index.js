@@ -37,11 +37,18 @@
 // const { name, age } = myProfile;
 // const message2 = `名前は${name}です。年齢は${age}歳です。`;
 // console.log(message2);
-const myProfile = ["じゃけぇ", 28];
+// const myProfile = ["じゃけぇ", 28];
 
-const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。`;
-console.log(message3);
+// const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。`;
+// console.log(message3);
 
-const [name, age] = myProfile;
-const message4 = `名前は${name}です。年齢は${age}歳です。`;
-console.log(message4);
+// const [name, age] = myProfile;
+// const message4 = `名前は${name}です。年齢は${age}歳です。`;
+// console.log(message4);
+
+// console.log(1 % 2);
+
+// 三項演算子
+// ある条件 ? 条件がtrueの時 : 条件がfalseの時
+const val1 = 1 < 0 ? "trueです" : "falseです";
+console.log(val1);
