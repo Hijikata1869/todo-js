@@ -17,7 +17,28 @@ const onClickAdd = () => {
   const completeButton = document.createElement("button");
   completeButton.innerText = "完了";
   completeButton.addEventListener("click", () => {
-    alert("完了");
+    // 完了ボタンが押されたタスクのli要素を取得
+    const val = completeButton.parentNode.firstElementChild;
+    // divタグ生成
+    const compDiv = document.createElement("div");
+    compDiv.className = "list-row";
+    // 戻すボタンを生成
+    const backBtn = document.createElement("button");
+    backBtn.innerText = "戻す";
+    backBtn.addEventListener("click", () => {
+      div.prepend(val);
+      document.getElementById("incomplete-list").appendChild(div);
+      const backTarget = backBtn.parentNode;
+      document.getElementById("complete-list").removeChild(backTarget);
+    });
+    // divタグの子要素に各要素を設定
+    compDiv.appendChild(val);
+    compDiv.appendChild(backBtn);
+    // 完了リストに追加
+    document.getElementById("complete-list").appendChild(compDiv);
+    // 未完了リストから削除
+    const deleteTarget = deleteButton.parentNode;
+    document.getElementById("incomplete-list").removeChild(deleteTarget);
   });
 
   // button(削除)タグ生成
